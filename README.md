@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zeit/hazel.svg?branch=master)](https://travis-ci.org/zeit/hazel)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
-[![Slack Channel](http://zeit-slackin.now.sh/badge.svg)](https://zeit.chat/)
+[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/zeit)
 
 This project lets you deploy an update server for [Electron](https://electron.atom.io) apps with ease: You only need to run a single command and fill out two text fields.
 
@@ -17,13 +17,25 @@ The result will be faster and more lightweight than any other solution out there
 
 ## Usage
 
-With [Now CLI](https://zeit.co/download), you can deploy an update server like this:
+With [Now CLI](https://zeit.co/download), you can easily deploy an update server. As the first step, clone the repository:
 
 ```bash
-now zeit/hazel
+git clone https://github.com/zeit/hazel
 ```
 
-You'll be asked for the value of two environment variables:
+Next, move into the directory:
+
+```bash
+cd hazel
+```
+
+Inside the directory, create a new deployment:
+
+```bash
+now -e ACCOUNT="<github-account>" -e REPOSITORY="<github-repository>"
+```
+
+On the command above, you can define the following environment variables:
 
 - `ACCOUNT`: Your username or organisation name on GitHub
 - `REPOSITORY`: The name of the repository to pull releases from
